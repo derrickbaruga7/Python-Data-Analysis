@@ -26,13 +26,3 @@ Yearly Trends: Off-season sewer usage generally exceeds on-season usage from 201
 Discussion
 
 The analysis provides valuable insights into sewer and water usage patterns, identifying key meters contributing to off-season usage. The predictive model shows promise, but further validation is needed.
-
-Conclusions
-
-Key Meters: Hamill_Timko_Dorms and Quad.Maintenance are significant contributors to off-season sewer usage.
-Predictive Model: The model demonstrates a good fit and potential for practical application.
-Trend Analysis: The data indicates a significant reduction in usage over time, potentially due to the introduction of deduct meters.
-Future Work
-
-Validation: Further validate the predictive model to ensure its reliability.
-Targeted Interventions: Develop strategies to address high off-season usage at identified trouble meters.
