@@ -1,28 +1,33 @@
-# Python-Data-Analysis
+# ORU water and sewer usage analysis
 
-This project analyzes ORU’s off-season sewer usage using Python, with `pandas` for data handling, histograms and line plots for exploration, and a `scipy`-based model for prediction. Pearson’s correlation and visualizations help reveal key trends and relationships.
+An exploratory Python notebook investigating seasonal water and sewer usage at ORU. The analysis compares off-season months (November through April) with the rest of the year, examines individual meters, and experiments with linear regression.
 
-Executive Summary
+## Explore the analysis
 
-The project aims to understand and reduce sewer usage during the off-season (November to April) at ORU. It explores factors influencing sewer usage, including cooling degrees and water usage, and builds a predictive model to minimize off-season usage.
+Open [python_data_analysis.ipynb](python_data_analysis.ipynb) to view the notebook and its saved outputs. Historical outputs describe the original run; they are not a fresh validation of the model.
 
-Goals of the Project
+## Run locally
 
-Understand Off-Season Sewer Usage: Analyze factors affecting sewer usage during off-season months and hypothesize methods to reduce it.
-Analyze Relationships: Examine how cooling degrees, water usage, and sewer charges relate to sewer usage.
-Predictive Modeling: Develop a model to predict and reduce off-season sewer usage.
-What We Did
+Use Python 3.10 or newer from the repository root:
 
-Exploratory Data Analysis: Generated histograms and line plots to capture usage patterns and seasonality.
-Usage Comparison: Compared off-season and on-season sewer usage to identify high-contributing meters.
-Predictive Modeling: Created a model with a low Mean Squared Error to estimate future sewer usage.
-Results
+```bash
+git clone https://github.com/derrickbaruga7/Python-Data-Analysis.git
+cd Python-Data-Analysis
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+jupyter lab python_data_analysis.ipynb
+```
 
-Usage Patterns: Histograms revealed significant variations in water and sewer usage, highlighting seasonal trends and anomalies.
-Seasonal Trends: The summary line graph showed a decrease in sewer usage from 2012 to present, with a spike in off-season usage from 2014 to 2017.
-Trouble Meters: Identified meters with higher off-season usage, such as Quad.Maintenance and Hamill_Timko_Dorms, which are key targets for intervention.
-Usage Comparisons: Significant decreases in water usage during the off-season were noted, with the NEC, Welcome.Center, and Chapel being less impactful compared to the major users.
-Yearly Trends: Off-season sewer usage generally exceeds on-season usage from 2013 onwards, with notable peaks and fluctuations.
-Discussion
+On Windows, activate with `.venv\Scripts\activate` instead.
 
-The analysis provides valuable insights into sewer and water usage patterns, identifying key meters contributing to off-season usage. The predictive model shows promise, but further validation is needed.
+The source workbook is **not included**. Place an authorized copy at `data/Water_Usage_ORU-2023.xlsx`, or set `ORU_WATER_DATA` to its path before launching Jupyter. The notebook loads all workbook sheets and expects the layout used in the original analysis. Review the transformation cells when using a different workbook. Local data is ignored by Git.
+
+## Methods and limits
+
+- Histograms and time-series plots explore usage patterns and seasonality.
+- Meter-level comparisons identify candidates for further investigation.
+- Pearson correlations and linear regression explore associations; they do not establish causes or prove that an intervention reduces usage.
+- The analysis needs the original workbook and a fresh execution before any reported model performance can be independently reproduced.
+
+Licensed under the [MIT License](LICENSE).
